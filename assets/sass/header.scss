@@ -1,0 +1,194 @@
+.header_container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .header_titles {
+        text-align: center;
+        padding-top: 30px;
+
+        @media (min-width:768px) {
+            padding-top: 132px;
+        }
+
+        .main_title {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 0.04em;
+            line-height: calc(36 / 26);
+            border-bottom: 1px solid rgba(102, 102, 102, 0.8);
+            width: 212px;
+            margin: 0 auto;
+
+            @media (min-width:768px) {
+                width: 560px;
+                font-size: 64px;
+                font-weight: bold;
+                letter-spacing: 0.08em;
+                line-height: calc(108 / 64);
+            }
+        }
+
+        .sub_title {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            line-height: calc(28 / 24);
+            border-bottom: 1px solid rgba(102, 102, 102, 0.8);
+            display: inline-block;
+            padding-bottom: 9px;
+
+            @media (min-width:768px) {
+                font-size: 54px;
+                letter-spacing: 0.04em;
+                line-height: calc(81 / 54);
+                padding-bottom: 7px;
+                margin-bottom: 82px;
+            }
+        }
+    }
+
+    .sp_btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: solid 2px rgba(0, 0, 0, 0.8);
+        right: 0;
+        top: 0;
+
+        @media (min-width:768px) {
+            display: none;
+        }
+
+        .sp_item {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 20px;
+            height: 2px;
+            background: #000000;
+
+            &:nth-child(1) {
+                top: -13px;
+            }
+
+            &:nth-child(2) {
+                top: 0;
+            }
+
+            &:nth-child(3) {
+                top: 14px;
+            }
+        }
+    }
+
+    .sp_btn.active .sp_item {
+
+        &:nth-child(1) {
+            transform: rotate(45deg);
+            top: 6px;
+        }
+
+        &:nth-child(2) {
+            display: none;
+        }
+
+        &:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 6px;
+        }
+    }
+
+    // ナビゲーション
+
+    .nav_container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        visibility:hidden;
+
+        @media (min-width:768px) {
+            justify-content: center;
+            visibility:visible;
+        }
+
+        .nav_lists {
+            position: absolute;
+            right: 0;
+            top: 40px;
+
+            @media(min-width:768px) {
+                position: static;
+            }
+
+            .ul_warp {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                flex: 1;
+                background: rgba(0, 0, 0, 0.48);
+                width: 118px;
+                padding-left: 8px;
+                padding-right: 8px;
+
+                @media (min-width:768px) {
+                    flex-direction: row;
+                    background: none;
+                    width: 100%;
+                    padding: 0;
+                    column-gap: 64px;
+                }
+
+                .li_item {
+                    padding-top: 17px;
+                    padding-bottom: 17px;
+
+                    @media (min-width:768px) {
+                        padding: 0;
+                    }
+                }
+
+                .li_item a {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    font-size: 12px;
+                    line-height: calc(18 / 12);
+                    letter-spacing: 0.03em;
+                    font-weight: normal;
+                    color: #ffff;
+
+                    @media (min-width:768px) {
+                        color: #666666;
+                        font-size: 16px;
+                        letter-spacing:0.03em;
+                        line-height: calc(18 / 16);
+                    }
+
+                    span {
+                        font-size: 16px;
+                        line-height: calc(22 / 16);
+                        letter-spacing: 0.03em;
+                        font-weight: 700;
+                        color: #ffff;
+
+                        @media (min-width:768px) {
+                            color: #666666;
+                            font-size: 30px;
+                            letter-spacing: 0.09em;
+                            line-height: calc(40 / 30);
+                            padding-bottom: 2px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .nav_container.active{
+        visibility: visible;
+    }
+
+
+}

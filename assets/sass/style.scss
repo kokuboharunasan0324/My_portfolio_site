@@ -1,0 +1,35 @@
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                scroll-behavior: smooth;
+            }
+
+
+            .my_portfolio_site {
+                font-family: "Noto Sans JP", sans-serif;
+                color: #666666;
+
+                a {
+                    color: initial;
+                    text-decoration: none;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    vertical-align: bottom;
+                }
+
+                ul li {
+                    list-style-type: none;
+                }
+            }
+
+            @import "header.scss";
+            @import "main.scss";
+            @import "footer.scss";
